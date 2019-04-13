@@ -19,9 +19,11 @@ Neighborhood.prototype.toHtml = function () {
   console.log('source', $template);
   // 2. Use Handlebars to "compile" the HTML
   let compiledTemplate = Handlebars.compile($template);
+  // console.log('is this a function?', compiledTemplate)
 
   // 3. Do not forget to return the HTML from this method
   // and... put it in the DOM.
+  console.log(compiledTemplate(this));
   return compiledTemplate(this);
 
 };
